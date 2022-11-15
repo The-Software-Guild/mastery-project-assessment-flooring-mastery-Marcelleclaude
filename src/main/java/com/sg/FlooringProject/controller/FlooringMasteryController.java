@@ -5,14 +5,16 @@ import com.sg.FlooringProject.ui.UserIO;
 import com.sg.FlooringProject.ui.UserIOImpl;
 
 public class FlooringMasteryController {
+    private FlooringProjectView view = new FlooringProjectView();
     private UserIO io= new UserIOImpl();
-    private FlooringProjectView view;
+
    // private FlooringMasteryServiceLayer service;
 
     public void run(){
         boolean keepGoing = true;
         int menuSelection=0;
         while(keepGoing){
+            menuSelection= getMenuSelection();
             io.print("<<Flooring Program>>");
             io.print("1. Display Orders");
             io.print ("2. Add an Order");
@@ -46,5 +48,9 @@ public class FlooringMasteryController {
             }
         }
         io.print("Good Bye");
+    }
+
+    private int getMenuSelection() {
+        return view.printMenuAndGetSelection();
     }
 }
