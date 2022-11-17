@@ -1,7 +1,9 @@
 package com.sg.FlooringProject.dto;
 
 import java.math.BigDecimal;
-
+/*
+only CustomerName, State, Productype and Area can be edited
+ */
 public class Orders {
     private int OrderNumber;
     private String CustomerName;
